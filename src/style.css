@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+    font-family: 'Poppins', 'Open Sans', sans-serif;
+    /* background-color: black; */
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    background-color: #281F33;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+.nav-bar img {
+    height: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-bar img:hover{
+    transform: rotate(360deg);
+    transition: 2s;
+}
+
+.nav-bar .navigation {
+    display: flex;
+    gap: 30px;
+
+}
+
+.nav-bar button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-bar button:hover {
+    transform: scaleX(1.5);
+    transition: 1.5s;
+    color: gold;
+    border-radius: 5px;
+}
+
+/* Home Page ***************************************** */
+.main-info{
+    display: flex;
+    margin:  auto 0;
+    justify-content: space-between;
+    background-color: #281F33;
+    padding: 20px;
+    color: #F0EFF4;
+}
+
+.main-info .hero-img img{
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.main-info .hero-text{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding: 20px;
+    
+}
+
+.main-info .hero-text h1{
+    font-size: 2.7rem;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.main-info .hero-text p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-info .hero-text .hero-para2{
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #f0eff476;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.main-info .hero-text button{
+    background-color: #F0EFF4;
+    color: #281F33;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 20%;
+    margin-top: 80px;
+    margin: auto;
+    
+}
+
+.main-info .hero-text button:hover{
+   transform: scaleX(1.1);
+    transition: 1s;
+    box-shadow: 0 4px 8px rgba(255, 254, 254, 0.57);
+}
+
+/* About section on the home page */
+.about-sec {
+    background-color: #f0eff4;
+    padding: 40px 20px;
+    text-align: center;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-sec h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-sec p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Menu section on home page  */
+.menu-sec {
+    background-color: #281F33;
+    color: #F0EFF4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+
+/* testimony section on home page */
+.test-sec {
+    background-color: #f0eff4;
+    color: #281F33;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.test-sec h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.test-sec ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.test-sec li {
+    margin: 10px 0;
+}
+
+/*########### Contact section on home page  ##################*/
+.contact-sec {
+    color: #281F33;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-sec p{
+    font-size: 10px;
+    font-weight: lighter;
+    line-height: 0.3;
+    color: #281f336e;
+}
+
+.contact-sec input{
+    width: 30%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-sec textarea {
+    width: 30%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-sec button {
+    background-color: #281F33;
+    color: #F0EFF4;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.contact-sec button:hover {
+    transform: scale(1.05);
+    color: #F0EFF4;
+    transition: 1s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.623);
+}
+
+.contact-sec h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-sec p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* footer section  */
+.footer {
+    background-color: #281F33;
+    color: #F0EFF4;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
