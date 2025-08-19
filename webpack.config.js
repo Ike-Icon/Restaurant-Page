@@ -1,6 +1,7 @@
 // webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 module.exports = {
     mode: "development",
@@ -12,11 +13,16 @@ module.exports = {
     },
     devtool: "eval-source-map",
     devServer: {
-    watchFiles: ["./src/template.html"],
+        watchFiles: ["./src/template.html"],
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html",
+        }),
+        new FaviconsWebpackPlugin({
+            logo: "./assets/logo-t.png",
+            mode: "webapp",
+            devMode: "webapp",
         }),
     ],
     module: {
