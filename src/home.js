@@ -1,7 +1,7 @@
 import { setupNavigation } from "./navigation";
 import { clearBody } from "./navigation";
 import { createMenuPage } from "./menu";
-import homeImg from "../assets/pizza.jpg"
+// import homeImg from "../assets/pizza.jpg"
 
 
 export function createHomePage() {
@@ -39,7 +39,7 @@ export function createHomePage() {
 
 
     const img = document.createElement("img");
-    img.src = homeImg;
+    img.src = "https://images.unsplash.com/photo-1605807646983-377bc5a76493?q=80&w=1624&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
     aboutSection();
 
@@ -59,7 +59,7 @@ export function createHomePage() {
     document.body.appendChild(mainInfo);
     document.body.appendChild(aboutSection());
     document.body.appendChild(menuSection());
-    document.body.appendChild(testimonySec());
+    // document.body.appendChild(testimonySec());
     document.body.appendChild(contactSection());
     document.body.appendChild(footerSection());
 }
@@ -86,36 +86,83 @@ function menuSection (){
     const h1 = document.createElement("h1");
     h1.textContent = "Customer Favorites"
 
-    const paragraph = document.createElement("p");
-    paragraph.textContent = "Explore our most popular dishes, crafted with the finest ingredients and a touch of love."
+    const menuList = document.createElement("ul");
+    menuList.classList.add("cus-fav-list");
+
+    const dishes = [
+        {
+            name: "Margherita Pizza",
+            image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=350&q=80",
+            description: "Classic pizza with fresh mozzarella, tomatoes, and basil."
+        },
+        {
+            name: "Spaghetti Carbonara",
+            image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=350&q=80",
+            description: "Traditional Italian pasta with pancetta, egg, and parmesan."
+        },
+        {
+            name: "Caesar Salad",
+            image: "https://images.unsplash.com/photo-1512852939750-1305098529bf?auto=format&fit=crop&w=350&q=80",
+            description: "Crisp romaine lettuce, parmesan, croutons, and Caesar dressing."
+        },
+        {
+            name: "Grilled Salmon",
+            image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=350&q=80",
+            description: "Fresh salmon fillet grilled to perfection, served with vegetables."
+        }
+        
+    ];
+
+    dishes.forEach(dish => {
+        const item = document.createElement("li")
+        item.classList.add("cus-fav-item");
+
+        const img = document.createElement("img");
+        img.src = dish.image;
+        img.alt = dish.name;
+        img.classList.add("cus-fav-img");
+
+        const dishName = document.createElement("h2");
+        dishName.textContent = dish.name;
+
+        // const dishDesc = document.createElement("p");
+        // dishDesc.textContent = dish.description;
+
+        item.appendChild(img);
+        item.appendChild(dishName);
+        // item.appendChild(dishDesc);
+
+
+        menuList.appendChild(item);
+    })
 
     menuSec.appendChild(h1);
-    menuSec.appendChild(paragraph);
+    menuSec.appendChild(menuList);
     return menuSec;
 }
 
-function testimonySec () {
-    const testSec = document.createElement("section");
-    testSec.classList.add("test-sec");
+// function testimonySec () {
+//     const testSec = document.createElement("section");
+//     testSec.classList.add("test-sec");
 
-    const h1 = document.createElement("h1");
-    h1.textContent = "What Our Guests Say";
+//     const h1 = document.createElement("h1");
+//     h1.textContent = "What Our Guests Say";
 
-    const testList = document.createElement("ul");
-    const listItem = document.createElement("li");
-    listItem.textContent = "⭐⭐⭐⭐⭐ The food is incredible! I felt at home the moment I walked in.";
-    const listItem2 = document.createElement("li");
-    listItem2.textContent = "⭐⭐⭐⭐⭐ A hidden gem! The ambiance is perfect for a cozy dinner.";
-    const listItem3 = document.createElement("li");
-    listItem3.textContent = "⭐⭐⭐⭐⭐ I can't recommend this place enough! The service was outstanding.";
-    testList.appendChild(listItem);
-    testList.appendChild(listItem2);
-    testList.appendChild(listItem3);
+//     const testList = document.createElement("ul");
+//     const listItem = document.createElement("li");
+//     listItem.textContent = "⭐⭐⭐⭐⭐ The food is incredible! I felt at home the moment I walked in.";
+//     const listItem2 = document.createElement("li");
+//     listItem2.textContent = "⭐⭐⭐⭐⭐ A hidden gem! The ambiance is perfect for a cozy dinner.";
+//     const listItem3 = document.createElement("li");
+//     listItem3.textContent = "⭐⭐⭐⭐⭐ I can't recommend this place enough! The service was outstanding.";
+//     testList.appendChild(listItem);
+//     testList.appendChild(listItem2);
+//     testList.appendChild(listItem3);
 
-    testSec.appendChild(h1);
-    testSec.appendChild(testList);
-    return testSec;
-}
+//     testSec.appendChild(h1);
+//     testSec.appendChild(testList);
+//     return testSec;
+// }
 
 // Helper function to create form fields
 function createFormField(type, name, placeholder) {
