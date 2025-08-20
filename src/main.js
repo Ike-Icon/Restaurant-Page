@@ -7,8 +7,8 @@ import "./style.css";
 
 
 // Initialization
-// createHomePage();
+createHomePage();
 // createMenuPage()
-createAboutPage()
+// createAboutPage()
 
 
